@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class PhotoAlbumController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,
 UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {

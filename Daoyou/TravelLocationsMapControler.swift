@@ -9,9 +9,9 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class TravelLocationsMapController: UIViewController, MKMapViewDelegate,
-VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
+class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
     
     // MARK: - Segue identifiers
     
@@ -24,13 +24,6 @@ VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
     // MARK: - View model
     
     private var viewModel = TravelLocationsMapViewModel()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-    }
     
     // MARK: - Storyboard outlets
     
@@ -58,7 +51,29 @@ VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
         }
     }
     
+    // MARK: - viewDidLoad
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
+
+        //self.locationManager.requestLocation()
+    }
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+        
+            self.mapView.setRegion(region, animated: true)
+            self.locationManager.stopUpdatingLocation()
+        
+    }
     
     // MARK: - VTMapViewDelegate
     
@@ -108,6 +123,7 @@ VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         mapView.showsUserLocation = (status == .AuthorizedWhenInUse)
+
     }
     
 }

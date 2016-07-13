@@ -7,6 +7,7 @@
 //
 
 import MapKit
+import CoreLocation
 
 protocol VTMapViewDelegate {
     func pinCreationBegan(coordinate: CLLocationCoordinate2D)

@@ -8,13 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		FCCA12221D353C0C00D64A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12211D353C0C00D64A1B /* AppDelegate.swift */; };
-		FCCA12241D353C0C00D64A1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12231D353C0C00D64A1B /* ViewController.swift */; };
 		FCCA12271D353C0C00D64A1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCA12251D353C0C00D64A1B /* Main.storyboard */; };
 		FCCA122A1D353C0C00D64A1B /* Daoyou.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12281D353C0C00D64A1B /* Daoyou.xcdatamodeld */; };
 		FCCA122C1D353C0C00D64A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCA122B1D353C0C00D64A1B /* Assets.xcassets */; };
 		FCCA122F1D353C0C00D64A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCA122D1D353C0C00D64A1B /* LaunchScreen.storyboard */; };
 		FCCA123A1D353C0C00D64A1B /* DaoyouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12391D353C0C00D64A1B /* DaoyouTests.swift */; };
 		FCCA12451D353C0C00D64A1B /* DaoyouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12441D353C0C00D64A1B /* DaoyouUITests.swift */; };
+		FCCA12741D353F2300D64A1B /* DownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12731D353F2300D64A1B /* DownloadingState.swift */; };
+		FCCA12761D353F3400D64A1B /* DownloadingStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12751D353F3400D64A1B /* DownloadingStateDelegate.swift */; };
+		FCCA12781D353F4500D64A1B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12771D353F4500D64A1B /* FileManager.swift */; };
+		FCCA127A1D353F5100D64A1B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12791D353F5100D64A1B /* NetworkManager.swift */; };
+		FCCA127C1D353F5F00D64A1B /* NetworkManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA127B1D353F5F00D64A1B /* NetworkManagerError.swift */; };
+		FCCA127E1D353F7100D64A1B /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA127D1D353F7100D64A1B /* ImageHandler.swift */; };
+		FCCA12861D35447700D64A1B /* PhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12851D35447700D64A1B /* PhotoAlbumViewModel.swift */; };
+		FCCA12881D35448800D64A1B /* PhotoAlbumViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12871D35448800D64A1B /* PhotoAlbumViewModelDelegate.swift */; };
+		FCCA128A1D3544D300D64A1B /* TravelLocationsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12891D3544D300D64A1B /* TravelLocationsMapViewModel.swift */; };
+		FCCA128C1D3544F900D64A1B /* FlickrGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA128B1D3544F900D64A1B /* FlickrGateway.swift */; };
+		FCCA128E1D35450600D64A1B /* FlickrGatewayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA128D1D35450600D64A1B /* FlickrGatewayError.swift */; };
+		FCCA12901D35451500D64A1B /* FlickrGatewayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA128F1D35451500D64A1B /* FlickrGatewayParser.swift */; };
+		FCCA12941D35454900D64A1B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12931D35454900D64A1B /* Photo.swift */; };
+		FCCA12961D35455E00D64A1B /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12951D35455E00D64A1B /* Photo+CoreDataProperties.swift */; };
+		FCCA12981D35456900D64A1B /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12971D35456900D64A1B /* Pin.swift */; };
+		FCCA129A1D35457900D64A1B /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12991D35457900D64A1B /* Pin+CoreDataProperties.swift */; };
+		FCCA129C1D35458B00D64A1B /* Pin+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA129B1D35458B00D64A1B /* Pin+MKAnnotation.swift */; };
+		FCCA129E1D3545C700D64A1B /* NSManagedObject+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA129D1D3545C700D64A1B /* NSManagedObject+Initializers.swift */; };
+		FCCA12A01D3545D400D64A1B /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA129F1D3545D400D64A1B /* CoreDataStackManager.swift */; };
+		FCCA12A21D35463C00D64A1B /* TravelLocationsMapControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12A11D35463C00D64A1B /* TravelLocationsMapControler.swift */; };
+		FCCA12A41D35464C00D64A1B /* PhotoAlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12A31D35464C00D64A1B /* PhotoAlbumController.swift */; };
+		FCCA12AC1D3546B300D64A1B /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12AB1D3546B300D64A1B /* SegueHandlerType.swift */; };
+		FCCA12AE1D3546CF00D64A1B /* SegueHandlerType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12AD1D3546CF00D64A1B /* SegueHandlerType+Extension.swift */; };
+		FCCA12B41D35480F00D64A1B /* PhotosAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12B31D35480F00D64A1B /* PhotosAlbumCell.swift */; };
+		FCCA12BA1D35EAD100D64A1B /* FlickrApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCA12B91D35EAD100D64A1B /* FlickrApiKey.plist */; };
+		FCCA12C41D361AAB00D64A1B /* VTMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12C31D361AAB00D64A1B /* VTMapView.swift */; };
+		FCCA12C61D361ABC00D64A1B /* VTMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA12C51D361ABC00D64A1B /* VTMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +62,45 @@
 
 /* Begin PBXFileReference section */
 		FCCA121E1D353C0C00D64A1B /* Daoyou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daoyou.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCCA12211D353C0C00D64A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCCA12231D353C0C00D64A1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCCA12211D353C0C00D64A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Daoyou/AppDelegate.swift; sourceTree = "<group>"; };
 		FCCA12261D353C0C00D64A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCCA12291D353C0C00D64A1B /* Daoyou.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daoyou.xcdatamodel; sourceTree = "<group>"; };
 		FCCA122B1D353C0C00D64A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCA122E1D353C0C00D64A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FCCA12301D353C0C00D64A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCA12301D353C0C00D64A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Daoyou/Info.plist; sourceTree = "<group>"; };
 		FCCA12351D353C0C00D64A1B /* DaoyouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaoyouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA12391D353C0C00D64A1B /* DaoyouTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoyouTests.swift; sourceTree = "<group>"; };
 		FCCA123B1D353C0C00D64A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCA12401D353C0C00D64A1B /* DaoyouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaoyouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA12441D353C0C00D64A1B /* DaoyouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoyouUITests.swift; sourceTree = "<group>"; };
 		FCCA12461D353C0C00D64A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCA12731D353F2300D64A1B /* DownloadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingState.swift; sourceTree = "<group>"; };
+		FCCA12751D353F3400D64A1B /* DownloadingStateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingStateDelegate.swift; sourceTree = "<group>"; };
+		FCCA12771D353F4500D64A1B /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		FCCA12791D353F5100D64A1B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FCCA127B1D353F5F00D64A1B /* NetworkManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerError.swift; sourceTree = "<group>"; };
+		FCCA127D1D353F7100D64A1B /* ImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		FCCA12851D35447700D64A1B /* PhotoAlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewModel.swift; sourceTree = "<group>"; };
+		FCCA12871D35448800D64A1B /* PhotoAlbumViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewModelDelegate.swift; sourceTree = "<group>"; };
+		FCCA12891D3544D300D64A1B /* TravelLocationsMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelLocationsMapViewModel.swift; sourceTree = "<group>"; };
+		FCCA128B1D3544F900D64A1B /* FlickrGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrGateway.swift; sourceTree = "<group>"; };
+		FCCA128D1D35450600D64A1B /* FlickrGatewayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrGatewayError.swift; sourceTree = "<group>"; };
+		FCCA128F1D35451500D64A1B /* FlickrGatewayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrGatewayParser.swift; sourceTree = "<group>"; };
+		FCCA12931D35454900D64A1B /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FCCA12951D35455E00D64A1B /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FCCA12971D35456900D64A1B /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		FCCA12991D35457900D64A1B /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FCCA129B1D35458B00D64A1B /* Pin+MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+MKAnnotation.swift"; sourceTree = "<group>"; };
+		FCCA129D1D3545C700D64A1B /* NSManagedObject+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Initializers.swift"; sourceTree = "<group>"; };
+		FCCA129F1D3545D400D64A1B /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		FCCA12A11D35463C00D64A1B /* TravelLocationsMapControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelLocationsMapControler.swift; sourceTree = "<group>"; };
+		FCCA12A31D35464C00D64A1B /* PhotoAlbumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumController.swift; sourceTree = "<group>"; };
+		FCCA12AB1D3546B300D64A1B /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		FCCA12AD1D3546CF00D64A1B /* SegueHandlerType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueHandlerType+Extension.swift"; sourceTree = "<group>"; };
+		FCCA12B31D35480F00D64A1B /* PhotosAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosAlbumCell.swift; sourceTree = "<group>"; };
+		FCCA12B91D35EAD100D64A1B /* FlickrApiKey.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FlickrApiKey.plist; path = ../FlickrApiKey.plist; sourceTree = "<group>"; };
+		FCCA12C31D361AAB00D64A1B /* VTMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTMapView.swift; sourceTree = "<group>"; };
+		FCCA12C51D361ABC00D64A1B /* VTMapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTMapViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +151,12 @@
 		FCCA12201D353C0C00D64A1B /* Daoyou */ = {
 			isa = PBXGroup;
 			children = (
-				FCCA12211D353C0C00D64A1B /* AppDelegate.swift */,
-				FCCA12231D353C0C00D64A1B /* ViewController.swift */,
+				FCCA12691D353E1E00D64A1B /* Utilities */,
+				FCCA126B1D353E3900D64A1B /* Models */,
+				FCCA126D1D353E4900D64A1B /* Views */,
+				FCCA126C1D353E3F00D64A1B /* Controllers */,
 				FCCA12251D353C0C00D64A1B /* Main.storyboard */,
-				FCCA122B1D353C0C00D64A1B /* Assets.xcassets */,
-				FCCA122D1D353C0C00D64A1B /* LaunchScreen.storyboard */,
-				FCCA12301D353C0C00D64A1B /* Info.plist */,
-				FCCA12281D353C0C00D64A1B /* Daoyou.xcdatamodeld */,
+				FCCA12B61D35499600D64A1B /* Supporting files */,
 			);
 			path = Daoyou;
 			sourceTree = "<group>";
@@ -126,6 +177,186 @@
 				FCCA12461D353C0C00D64A1B /* Info.plist */,
 			);
 			path = DaoyouUITests;
+			sourceTree = "<group>";
+		};
+		FCCA12691D353E1E00D64A1B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12721D353ED000D64A1B /* Downloading */,
+				FCCA126F1D353EB000D64A1B /* File system */,
+				FCCA12711D353EC600D64A1B /* Image handler */,
+				FCCA12701D353EBB00D64A1B /* Network */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FCCA126B1D353E3900D64A1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12821D353FE400D64A1B /* View models */,
+				FCCA12811D353FD700D64A1B /* Flickr */,
+				FCCA12801D353FCE00D64A1B /* Entities */,
+				FCCA127F1D353FAA00D64A1B /* Core data */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FCCA126C1D353E3F00D64A1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12A11D35463C00D64A1B /* TravelLocationsMapControler.swift */,
+				FCCA12A31D35464C00D64A1B /* PhotoAlbumController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FCCA126D1D353E4900D64A1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12AA1D35469700D64A1B /* Segues */,
+				FCCA12A91D35468700D64A1B /* Map */,
+				FCCA12A51D35465800D64A1B /* PhotosAlbum */,
+				FCCA12A61D35466300D64A1B /* Resources */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FCCA126F1D353EB000D64A1B /* File system */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12771D353F4500D64A1B /* FileManager.swift */,
+			);
+			name = "File system";
+			sourceTree = "<group>";
+		};
+		FCCA12701D353EBB00D64A1B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12791D353F5100D64A1B /* NetworkManager.swift */,
+				FCCA127B1D353F5F00D64A1B /* NetworkManagerError.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		FCCA12711D353EC600D64A1B /* Image handler */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA127D1D353F7100D64A1B /* ImageHandler.swift */,
+			);
+			name = "Image handler";
+			sourceTree = "<group>";
+		};
+		FCCA12721D353ED000D64A1B /* Downloading */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12731D353F2300D64A1B /* DownloadingState.swift */,
+				FCCA12751D353F3400D64A1B /* DownloadingStateDelegate.swift */,
+			);
+			name = Downloading;
+			sourceTree = "<group>";
+		};
+		FCCA127F1D353FAA00D64A1B /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12281D353C0C00D64A1B /* Daoyou.xcdatamodeld */,
+				FCCA129F1D3545D400D64A1B /* CoreDataStackManager.swift */,
+				FCCA129D1D3545C700D64A1B /* NSManagedObject+Initializers.swift */,
+			);
+			name = "Core data";
+			sourceTree = "<group>";
+		};
+		FCCA12801D353FCE00D64A1B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12921D35453300D64A1B /* Pin */,
+				FCCA12911D35452B00D64A1B /* Photo */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		FCCA12811D353FD700D64A1B /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA128B1D3544F900D64A1B /* FlickrGateway.swift */,
+				FCCA128D1D35450600D64A1B /* FlickrGatewayError.swift */,
+				FCCA128F1D35451500D64A1B /* FlickrGatewayParser.swift */,
+				FCCA12B91D35EAD100D64A1B /* FlickrApiKey.plist */,
+			);
+			name = Flickr;
+			sourceTree = "<group>";
+		};
+		FCCA12821D353FE400D64A1B /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12891D3544D300D64A1B /* TravelLocationsMapViewModel.swift */,
+				FCCA12851D35447700D64A1B /* PhotoAlbumViewModel.swift */,
+				FCCA12871D35448800D64A1B /* PhotoAlbumViewModelDelegate.swift */,
+			);
+			name = "View models";
+			sourceTree = "<group>";
+		};
+		FCCA12911D35452B00D64A1B /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12931D35454900D64A1B /* Photo.swift */,
+				FCCA12951D35455E00D64A1B /* Photo+CoreDataProperties.swift */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		FCCA12921D35453300D64A1B /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12971D35456900D64A1B /* Pin.swift */,
+				FCCA12991D35457900D64A1B /* Pin+CoreDataProperties.swift */,
+				FCCA129B1D35458B00D64A1B /* Pin+MKAnnotation.swift */,
+			);
+			name = Pin;
+			sourceTree = "<group>";
+		};
+		FCCA12A51D35465800D64A1B /* PhotosAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12B31D35480F00D64A1B /* PhotosAlbumCell.swift */,
+			);
+			name = PhotosAlbum;
+			sourceTree = "<group>";
+		};
+		FCCA12A61D35466300D64A1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA122D1D353C0C00D64A1B /* LaunchScreen.storyboard */,
+				FCCA122B1D353C0C00D64A1B /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCCA12A91D35468700D64A1B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12C31D361AAB00D64A1B /* VTMapView.swift */,
+				FCCA12C51D361ABC00D64A1B /* VTMapViewDelegate.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		FCCA12AA1D35469700D64A1B /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12AB1D3546B300D64A1B /* SegueHandlerType.swift */,
+				FCCA12AD1D3546CF00D64A1B /* SegueHandlerType+Extension.swift */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		FCCA12B61D35499600D64A1B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA12211D353C0C00D64A1B /* AppDelegate.swift */,
+				FCCA12301D353C0C00D64A1B /* Info.plist */,
+			);
+			name = "Supporting files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +465,7 @@
 			files = (
 				FCCA122F1D353C0C00D64A1B /* LaunchScreen.storyboard in Resources */,
 				FCCA122C1D353C0C00D64A1B /* Assets.xcassets in Resources */,
+				FCCA12BA1D35EAD100D64A1B /* FlickrApiKey.plist in Resources */,
 				FCCA12271D353C0C00D64A1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +491,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCA12A21D35463C00D64A1B /* TravelLocationsMapControler.swift in Sources */,
+				FCCA12941D35454900D64A1B /* Photo.swift in Sources */,
+				FCCA12AE1D3546CF00D64A1B /* SegueHandlerType+Extension.swift in Sources */,
+				FCCA12741D353F2300D64A1B /* DownloadingState.swift in Sources */,
+				FCCA12AC1D3546B300D64A1B /* SegueHandlerType.swift in Sources */,
+				FCCA12761D353F3400D64A1B /* DownloadingStateDelegate.swift in Sources */,
+				FCCA12A41D35464C00D64A1B /* PhotoAlbumController.swift in Sources */,
+				FCCA12981D35456900D64A1B /* Pin.swift in Sources */,
+				FCCA12881D35448800D64A1B /* PhotoAlbumViewModelDelegate.swift in Sources */,
+				FCCA12901D35451500D64A1B /* FlickrGatewayParser.swift in Sources */,
+				FCCA129C1D35458B00D64A1B /* Pin+MKAnnotation.swift in Sources */,
+				FCCA129E1D3545C700D64A1B /* NSManagedObject+Initializers.swift in Sources */,
+				FCCA12C61D361ABC00D64A1B /* VTMapViewDelegate.swift in Sources */,
+				FCCA12961D35455E00D64A1B /* Photo+CoreDataProperties.swift in Sources */,
+				FCCA12C41D361AAB00D64A1B /* VTMapView.swift in Sources */,
+				FCCA128C1D3544F900D64A1B /* FlickrGateway.swift in Sources */,
 				FCCA122A1D353C0C00D64A1B /* Daoyou.xcdatamodeld in Sources */,
-				FCCA12241D353C0C00D64A1B /* ViewController.swift in Sources */,
+				FCCA127C1D353F5F00D64A1B /* NetworkManagerError.swift in Sources */,
+				FCCA128E1D35450600D64A1B /* FlickrGatewayError.swift in Sources */,
+				FCCA12A01D3545D400D64A1B /* CoreDataStackManager.swift in Sources */,
+				FCCA129A1D35457900D64A1B /* Pin+CoreDataProperties.swift in Sources */,
+				FCCA127A1D353F5100D64A1B /* NetworkManager.swift in Sources */,
+				FCCA12B41D35480F00D64A1B /* PhotosAlbumCell.swift in Sources */,
+				FCCA12781D353F4500D64A1B /* FileManager.swift in Sources */,
+				FCCA128A1D3544D300D64A1B /* TravelLocationsMapViewModel.swift in Sources */,
+				FCCA127E1D353F7100D64A1B /* ImageHandler.swift in Sources */,
 				FCCA12221D353C0C00D64A1B /* AppDelegate.swift in Sources */,
+				FCCA12861D35447700D64A1B /* PhotoAlbumViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -146,7 +146,7 @@
             </objects>
             <point key="canvasLocation" x="2435" y="172"/>
         </scene>
-        <!--Virtual Tourist-->
+        <!--Daoyou-->
         <scene sceneID="REO-Gu-9VN">
             <objects>
                 <viewController id="0Ih-3U-gso" customClass="TravelLocationsMapController" customModule="Daoyou" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,7 +184,7 @@
                             <constraint firstItem="aBP-H8-oNg" firstAttribute="leading" secondItem="ps7-py-hp9" secondAttribute="leading" id="spY-2r-99g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Virtual Tourist" id="edR-GD-gRL">
+                    <navigationItem key="navigationItem" title="Daoyou" id="edR-GD-gRL">
                         <barButtonItem key="backBarButtonItem" title="OK" id="QbN-B9-tgR"/>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="xBn-z8-Cax">
                             <connections>

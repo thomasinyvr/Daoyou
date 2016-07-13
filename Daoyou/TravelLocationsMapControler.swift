@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 
 class TravelLocationsMapController: UIViewController, MKMapViewDelegate,
-VTMapViewDelegate, SegueHandlerType {
+VTMapViewDelegate, SegueHandlerType, CLLocationManagerDelegate {
     
     // MARK: - Segue identifiers
     
@@ -19,9 +19,18 @@ VTMapViewDelegate, SegueHandlerType {
         case ShowPhotoAlbumForPin
     }
     
+    let locationManager = CLLocationManager()
+    
     // MARK: - View model
     
     private var viewModel = TravelLocationsMapViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+    }
     
     // MARK: - Storyboard outlets
     
@@ -48,6 +57,8 @@ VTMapViewDelegate, SegueHandlerType {
             self.view.layoutIfNeeded()
         }
     }
+    
+    
     
     // MARK: - VTMapViewDelegate
     
@@ -93,6 +104,10 @@ VTMapViewDelegate, SegueHandlerType {
             
         }
         
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        mapView.showsUserLocation = (status == .AuthorizedWhenInUse)
     }
     
 }

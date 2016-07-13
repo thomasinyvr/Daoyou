@@ -7,13 +7,12 @@
 //
 
 import MapKit
+import CoreLocation
 
 /**
  This is a subclass of MKMapView in order to separate the code for handling
  long presses and additions of annotations. The prefix "VT" stands for
  the project name, Virtual Tourist.
- 
- - author: Stefan Veis Pennerup
  */
 class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
     
@@ -24,6 +23,10 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
     // MARK: - Properties
     
     var deletionMode = false
+    
+    // MARK: - Location Manager
+    
+    let locationManager = CLLocationManager()
     
     // MARK: - Gesture Recognizer
     
@@ -39,6 +42,7 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         initializeMap()
+
     }
     
     required init?(coder aDecoder: NSCoder) {

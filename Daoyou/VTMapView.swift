@@ -122,13 +122,10 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
             aV.frame = CGRectOffset(endFrame, 0, -self.frame.size.height)
             
             // Animates the drop
-            UIView.animateWithDuration(0.3,
-                                       delay: 0.04 * Double(views.indexOf(aV) ?? 0),
-                                       options: .CurveLinear,
-                                       animations: {
-                                        aV.frame = endFrame
+            UIView.animateWithDuration(0.3, delay: 0.04 * Double(views.indexOf(aV) ?? 0), options: .CurveLinear, animations: {
+                    aV.frame = endFrame
                 },
-                                       completion: { (finished) in
+                    completion: { (finished) in
                                         
             })
             

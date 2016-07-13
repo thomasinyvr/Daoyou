@@ -21,6 +21,7 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var tapPinForPhotosLabel: UILabel!
     // MARK: - View model
     
     private var viewModel = TravelLocationsMapViewModel()

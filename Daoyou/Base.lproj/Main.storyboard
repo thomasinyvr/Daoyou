@@ -162,31 +162,41 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <gestureRecognizers/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pins to Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-H8-oNg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pins to Delete, &quot;Edit pins&quot; when done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-H8-oNg">
                                 <rect key="frame" x="0.0" y="600" width="600" height="0.0"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="Xjz-60-5QU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap Pin to see photos for that location!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-ac-Ihq">
+                                <rect key="frame" x="0.0" y="579" width="600" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.69881465517241381" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wVd-ac-Ihq" firstAttribute="leading" secondItem="aBP-H8-oNg" secondAttribute="leading" id="8Bp-qd-N8q"/>
                             <constraint firstItem="WZA-Ey-iVh" firstAttribute="leading" secondItem="ps7-py-hp9" secondAttribute="leading" id="IJJ-fh-ft7"/>
                             <constraint firstItem="WZA-Ey-iVh" firstAttribute="top" secondItem="dBe-AA-UKT" secondAttribute="bottom" id="L8a-n8-ApN"/>
                             <constraint firstAttribute="trailing" secondItem="aBP-H8-oNg" secondAttribute="trailing" id="N14-HS-c5h"/>
                             <constraint firstAttribute="trailing" secondItem="WZA-Ey-iVh" secondAttribute="trailing" id="R0Q-z5-QDg"/>
                             <constraint firstItem="aBP-H8-oNg" firstAttribute="top" secondItem="WZA-Ey-iVh" secondAttribute="bottom" id="TS1-3R-g6M"/>
+                            <constraint firstItem="wVd-ac-Ihq" firstAttribute="trailing" secondItem="aBP-H8-oNg" secondAttribute="trailing" id="W3t-Ov-tT1"/>
                             <constraint firstItem="KeC-Fy-0BU" firstAttribute="top" secondItem="aBP-H8-oNg" secondAttribute="bottom" id="Yfv-2O-yZZ"/>
+                            <constraint firstItem="wVd-ac-Ihq" firstAttribute="bottom" secondItem="KeC-Fy-0BU" secondAttribute="top" id="a6H-ZY-dZ4"/>
                             <constraint firstItem="aBP-H8-oNg" firstAttribute="leading" secondItem="ps7-py-hp9" secondAttribute="leading" id="spY-2r-99g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Daoyou" id="edR-GD-gRL">
                         <barButtonItem key="backBarButtonItem" title="OK" id="QbN-B9-tgR"/>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="xBn-z8-Cax">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Pin(s)" id="xBn-z8-Cax">
                             <connections>
                                 <action selector="editButtonPressed:" destination="0Ih-3U-gso" id="2E7-lc-n1h"/>
                             </connections>
@@ -195,6 +205,7 @@
                     <connections>
                         <outlet property="deletionLabelHeight" destination="Xjz-60-5QU" id="7kw-TI-Jve"/>
                         <outlet property="mapView" destination="WZA-Ey-iVh" id="aB3-lC-Fe8"/>
+                        <outlet property="tapPinForPhotosLabel" destination="wVd-ac-Ihq" id="XqZ-UO-wfP"/>
                         <segue destination="ixe-D0-8Ks" kind="show" identifier="ShowPhotoAlbumForPin" id="7Ei-Oe-Y2j"/>
                     </connections>
                 </viewController>

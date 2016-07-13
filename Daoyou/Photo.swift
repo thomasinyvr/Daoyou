@@ -30,8 +30,7 @@ class Photo: NSManagedObject {
     
     private convenience init() {
         let context = CoreDataStackManager.sharedInstance.managedObjectContext
-        let entity = NSEntityDescription.entityForName(self.dynamicType.entityName(),
-                                                       inManagedObjectContext: context)!
+        let entity = NSEntityDescription.entityForName(self.dynamicType.entityName(), inManagedObjectContext: context)!
         self.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     
@@ -89,14 +88,11 @@ class Photo: NSManagedObject {
     
     func downloadImage(handler: ((UIImage?) -> Void)?) {
         downloadingState = .IsLoading
-        ImageHandler.downloadJpgImageToLocalFileSystemFromUrl(url,
-                                                              withFileName: id,
-                                                              successHandler: { [weak self] (image) in
-                                                                handler?(image)
-                                                                self?.downloadingState = .Loaded
+        ImageHandler.downloadJpgImageToLocalFileSystemFromUrl(url, withFileName: id, successHandler: { [weak self] (image) in handler?(image)
+                self?.downloadingState = .Loaded
             },
-                                                              errorHandler: { [weak self] in
-                                                                self?.downloadingState = .NotLoaded
+                errorHandler: { [weak self] in
+                self?.downloadingState = .NotLoaded
             })
     }
     

@@ -42,7 +42,7 @@ struct FlickrGateway {
         static let Json = "json"
         static let MethodPhotoSearch = "flickr.photos.search"
         static let NoJsonCallback = "1"
-        static let Radius = 1 // km
+        static let Radius = 0.15 // km
         static let PerPage = 30 // Maximum photos per page
     }
     

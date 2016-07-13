@@ -16,8 +16,7 @@ class Pin: NSManagedObject {
     
     private convenience init() {
         let context = CoreDataStackManager.sharedInstance.managedObjectContext
-        let entity = NSEntityDescription.entityForName(self.dynamicType.entityName(),
-                                                       inManagedObjectContext: context)!
+        let entity = NSEntityDescription.entityForName(self.dynamicType.entityName(), inManagedObjectContext: context)!
         self.init(entity: entity, insertIntoManagedObjectContext: context)
     }
     

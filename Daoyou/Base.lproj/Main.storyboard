@@ -42,6 +42,8 @@
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVw-wX-vGt">
                                 <rect key="frame" x="0.0" y="183" width="600" height="357"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H8U-9G-gmP">
                                     <size key="itemSize" width="120" height="115"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -57,7 +59,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-UN-XEv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="115"/>
+                                                    <rect key="frame" x="2" y="2" width="116" height="111"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-FJ-92T">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="115"/>
@@ -69,15 +72,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="vEx-UN-XEv" firstAttribute="leading" secondItem="yTT-LT-6sT" secondAttribute="leading" id="9Vn-YM-Kju"/>
+                                            <constraint firstItem="vEx-UN-XEv" firstAttribute="leading" secondItem="yTT-LT-6sT" secondAttribute="leading" constant="2" id="9Vn-YM-Kju"/>
                                             <constraint firstItem="8dc-FJ-92T" firstAttribute="leading" secondItem="yTT-LT-6sT" secondAttribute="leading" id="Edu-cs-cAQ"/>
                                             <constraint firstItem="Gh9-5E-BbE" firstAttribute="centerY" secondItem="yTT-LT-6sT" secondAttribute="centerY" id="Rnn-Ls-dAZ"/>
-                                            <constraint firstItem="vEx-UN-XEv" firstAttribute="top" secondItem="yTT-LT-6sT" secondAttribute="top" id="SRV-wW-b1D"/>
-                                            <constraint firstAttribute="trailing" secondItem="vEx-UN-XEv" secondAttribute="trailing" id="WXz-B9-Tqf"/>
+                                            <constraint firstItem="vEx-UN-XEv" firstAttribute="top" secondItem="yTT-LT-6sT" secondAttribute="top" constant="2" id="SRV-wW-b1D"/>
+                                            <constraint firstAttribute="trailing" secondItem="vEx-UN-XEv" secondAttribute="trailing" constant="2" id="WXz-B9-Tqf"/>
                                             <constraint firstAttribute="trailing" secondItem="8dc-FJ-92T" secondAttribute="trailing" id="b0F-GO-ytX"/>
                                             <constraint firstItem="Gh9-5E-BbE" firstAttribute="centerX" secondItem="yTT-LT-6sT" secondAttribute="centerX" id="cSF-ty-U9r"/>
-                                            <constraint firstAttribute="bottom" secondItem="vEx-UN-XEv" secondAttribute="bottom" id="ee5-bN-ab7"/>
+                                            <constraint firstAttribute="bottom" secondItem="vEx-UN-XEv" secondAttribute="bottom" constant="2" id="ee5-bN-ab7"/>
                                             <constraint firstAttribute="bottom" secondItem="8dc-FJ-92T" secondAttribute="bottom" id="frc-X2-CJj"/>
                                             <constraint firstItem="8dc-FJ-92T" firstAttribute="top" secondItem="yTT-LT-6sT" secondAttribute="top" id="uoz-h2-HlX"/>
                                         </constraints>
@@ -172,9 +177,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap Pin to see photos for that location!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-ac-Ihq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap Pin to see photos for that location!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-ac-Ihq">
                                 <rect key="frame" x="0.0" y="579" width="600" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.69881465517241381" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -196,7 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Daoyou" id="edR-GD-gRL">
                         <barButtonItem key="backBarButtonItem" title="OK" id="QbN-B9-tgR"/>
-                        <barButtonItem key="rightBarButtonItem" title="Edit Pin(s)" id="xBn-z8-Cax">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="xBn-z8-Cax">
                             <connections>
                                 <action selector="editButtonPressed:" destination="0Ih-3U-gso" id="2E7-lc-n1h"/>
                             </connections>

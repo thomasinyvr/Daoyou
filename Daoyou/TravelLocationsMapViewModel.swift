@@ -31,6 +31,7 @@ class TravelLocationsMapViewModel {
     func deletePin(pin: Pin) {
         CoreDataStackManager.sharedInstance.managedObjectContext.deleteObject(pin)
         CoreDataStackManager.sharedInstance.saveContext()
+    
     }
     
     // MARK: - Photos download

@@ -90,7 +90,6 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
     
     /**
      Adds the given annotation to the map view and centers the map view around that annotation
-     
      - parameter annotation: The annotation object to be added and centered around on the map.
      */
     func addAnnotationAndCenter(annotation: MKAnnotation) {

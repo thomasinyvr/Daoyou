@@ -19,14 +19,17 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
         case ShowPhotoAlbumForPin
     }
     
-    let locationManager = CLLocationManager()
+    // MARK: - locationManagerInitialize
     
-    @IBOutlet weak var tapPinForPhotosLabel: UILabel!
+    let locationManager = CLLocationManager()
+   
     // MARK: - View model
     
     private var viewModel = TravelLocationsMapViewModel()
     
     // MARK: - Storyboard outlets
+    
+    @IBOutlet weak var tapPinForPhotosLabel: UILabel!
     
     @IBOutlet weak var mapView: VTMapView! {
         didSet {
@@ -43,7 +46,6 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     
     @IBAction func editButtonPressed(sender: UIBarButtonItem) {
         mapView.deletionMode = !mapView.deletionMode
-        
         // Animates the showing/hiding of deletion labels
         view.layoutIfNeeded()
         self.deletionLabelHeight.constant = (self.mapView.deletionMode) ? 70 : 0
@@ -56,6 +58,8 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+    // MARK: - locationManager
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -63,8 +67,8 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
 
-        //self.locationManager.requestLocation()
     }
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
@@ -90,7 +94,6 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     
     func pinCreationFinished(finalCoordinate: CLLocationCoordinate2D) {
         viewModel.savePinBeingCreated()
-        // If it has been created, then well. The app can take a nap now
     }
     
     func didSelectAnnotation(annotation: MKAnnotation) {
@@ -124,7 +127,7 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         mapView.showsUserLocation = (status == .AuthorizedWhenInUse)
-
+        
     }
     
 }

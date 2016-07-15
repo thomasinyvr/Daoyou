@@ -114,7 +114,6 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
             }
             
             // Applies drop animation to annotation view
-            
             // Defines the final position
             let endFrame = aV.frame
             

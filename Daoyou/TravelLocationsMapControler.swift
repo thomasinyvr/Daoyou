@@ -46,6 +46,8 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     
     @IBAction func editButtonPressed(sender: UIBarButtonItem) {
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self,  action: #selector(editButtonPressed))
+        
         mapView.deletionMode = !mapView.deletionMode
         // Animates the showing/hiding of deletion labels
         view.layoutIfNeeded()
@@ -53,7 +55,6 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
         UIView.animateWithDuration(0.25) {
             self.view.layoutIfNeeded()
             self.tapPinForPhotosLabel.hidden = true
-            
         }
     }
     
@@ -62,18 +63,12 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //navigationItem.rightBarButtonItem = editButtonItem()
-
-        
         // MARK: - locationManager
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
-        
-        
-        
     }
     
     
@@ -127,6 +122,9 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
                     return
             }
             destinationVC.viewModel = PhotoAlbumViewModel(pin: pin)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self,  action: #selector(editButtonPressed))
+            
+
             
         }
         

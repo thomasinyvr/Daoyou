@@ -16,3 +16,4 @@ protocol VTMapViewDelegate {
     func didSelectAnnotation(annotation: MKAnnotation)
     func didRemoveAnnotation(annotation: MKAnnotation)
 }
+

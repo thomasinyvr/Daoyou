@@ -45,12 +45,15 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
     // MARK: - Storyboard actions
     
     @IBAction func editButtonPressed(sender: UIBarButtonItem) {
+        
         mapView.deletionMode = !mapView.deletionMode
         // Animates the showing/hiding of deletion labels
         view.layoutIfNeeded()
         self.deletionLabelHeight.constant = (self.mapView.deletionMode) ? 70 : 0
         UIView.animateWithDuration(0.25) {
             self.view.layoutIfNeeded()
+            self.tapPinForPhotosLabel.hidden = true
+            
         }
     }
     
@@ -58,15 +61,19 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-    // MARK: - locationManager
         
+        //navigationItem.rightBarButtonItem = editButtonItem()
+
+        
+        // MARK: - locationManager
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
-
+        
+        
+        
     }
     
     

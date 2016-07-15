@@ -54,6 +54,7 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
         // Adds the long gesture recognizer
         addGestureRecognizer(longPressGestureRecognizer)
         delegate = self
+        
     }
     
     // MARK: - Gesture Recognizer callbacks
@@ -137,6 +138,7 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
         mapView.deselectAnnotation(annotation, animated: true)
         
         if deletionMode {
+            
             mapView.removeAnnotation(annotation)
             vtDelegate?.didRemoveAnnotation(annotation)
         } else {

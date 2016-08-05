@@ -1,3 +1,4 @@
+
 //
 //  SegueHandlerType.swift
 //  Daoyou
@@ -12,5 +13,5 @@
  *  https://www.natashatherobot.com/protocol-oriented-segue-identifiers-swift/
  */
 protocol SegueHandlerType {
-    typealias SegueIdentifier: RawRepresentable
+    associatedtype SegueIdentifier: RawRepresentable
 }

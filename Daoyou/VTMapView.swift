@@ -31,7 +31,7 @@ class VTMapView: MKMapView, UIGestureRecognizerDelegate, MKMapViewDelegate {
     // MARK: - Gesture Recognizer
     
     private var longPressGestureRecognizer: UILongPressGestureRecognizer {
-        let lpgr = UILongPressGestureRecognizer(target: self, action: "longPressOnMapView:")
+        let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(VTMapView.longPressOnMapView(_:)))
         lpgr.minimumPressDuration = 0.5 // secs
         lpgr.delegate = self
         return lpgr

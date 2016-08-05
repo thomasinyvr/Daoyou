@@ -10,6 +10,8 @@ import Foundation
 
 struct FlickrGatewayParser {
     
+    
+    
     // MARK: - Flickr.Photos.Search
     
     private struct PhotosSearchConstants {
@@ -34,3 +36,4 @@ struct FlickrGatewayParser {
             return photos
     }
 }
+    

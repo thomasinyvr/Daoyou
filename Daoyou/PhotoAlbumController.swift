@@ -18,7 +18,7 @@ UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {
     private struct Strings {
         static let NewCollection = NSLocalizedString("New Collection", comment: "")
         static let RemoveSelectedPictures =
-            NSLocalizedString("Remove Selected Pictures", comment: "")
+            NSLocalizedString("Flag Content/Block User", comment: "")
     }
     
     // MARK: - View model
@@ -42,7 +42,7 @@ UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var button: UIButton! {
         didSet {
-            button.setTitle(Strings.NewCollection, forState: .Normal)
+            button.setTitle(Strings.RemoveSelectedPictures, forState: .Normal)
         }
     }
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -75,17 +75,11 @@ UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {
     
     // MARK: - UICollectionViewDataSource
     
-    func collectionView(
-        collectionView: UICollectionView,
-        numberOfItemsInSection section: Int)
-        -> Int {
+    func collectionView( collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return viewModel?.getPhotosCount() ?? 0
     }
     
-    func collectionView(
-        collectionView: UICollectionView,
-        cellForItemAtIndexPath indexPath: NSIndexPath)
-        -> UICollectionViewCell {
+    func collectionView( collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
                 PhotosAlbumCell.ReuseIdentifier,
                 forIndexPath: indexPath)
@@ -102,9 +96,7 @@ UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {
     
     // MARK: - UICollectionViewDelegate
     
-    func collectionView(
-        collectionView: UICollectionView,
-        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView( collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         if collectionView.indexPathsForSelectedItems()?.count > 0 {
             button.setTitle(Strings.RemoveSelectedPictures, forState: .Normal)
@@ -112,47 +104,32 @@ UICollectionViewDelegateFlowLayout, PhotoAlbumViewModelDelegate {
         
     }
     
-    func collectionView(
-        collectionView: UICollectionView,
-        didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView( collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         
         if collectionView.indexPathsForSelectedItems()?.count == 0 {
-            button.setTitle(Strings.NewCollection, forState: .Normal)
+            button.setTitle(Strings.RemoveSelectedPictures, forState: .Normal)
         }
         
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
     
-    func collectionView(
-        collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-               sizeForItemAtIndexPath indexPath: NSIndexPath)
-        -> CGSize {
+    func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             let thirdWidth = collectionView.frame.size.width / 3
             return CGSize(width: thirdWidth, height: thirdWidth)
     }
     
-    func collectionView(
-        collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-               insetForSectionAtIndex section: Int)
+    func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int)
         -> UIEdgeInsets {
             return UIEdgeInsetsZero
     }
     
-    func collectionView(
-        collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-               minimumInteritemSpacingForSectionAtIndex section: Int)
+    func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int)
         -> CGFloat {
             return 0
     }
     
-    func collectionView(
-        collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-               minimumLineSpacingForSectionAtIndex section: Int)
+    func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int)
         -> CGFloat {
             return 0
     }

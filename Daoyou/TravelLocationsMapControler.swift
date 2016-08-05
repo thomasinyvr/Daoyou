@@ -71,6 +71,42 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
         self.mapView.showsUserLocation = true
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        let link = "https://www.facebook.com/permalink.php?story_fbid=1651850905138083&id=1651847838471723"
+        let AlertOnce = NSUserDefaults.standardUserDefaults()
+        if(!AlertOnce.boolForKey("oneTimeAlert")){
+            
+            let alert = UIAlertController(title: "Read our Terms and Conditions", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let DoNotShowAgainAction = UIAlertAction(title: "Agree", style: UIAlertActionStyle.Default) { (action:UIAlertAction) in
+                AlertOnce.setBool(true , forKey: "oneTimeAlert")
+                AlertOnce.synchronize()
+                
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+                UIAlertAction in
+                alert.removeFromParentViewController()
+            }
+            
+            let readAction = UIAlertAction(title: "Click to Read", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                
+                AlertOnce.setBool(false, forKey: "oneTimeAlert")
+                AlertOnce.synchronize()
+                UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+            }
+
+            alert.addAction(cancelAction)
+            alert.addAction(DoNotShowAgainAction)
+            alert.addAction(readAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last

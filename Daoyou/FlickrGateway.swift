@@ -10,6 +10,8 @@ import Foundation
 
 struct FlickrGateway {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     // MARK: - API Key
     
     private struct FlickrApiKey {
@@ -71,6 +73,9 @@ struct FlickrGateway {
             name: FlickrQueryKeys.PerPage,
             value: String(FlickrQueryItemValues.PerPage))
     }
+
+    
+    
     
     // MARK: - Public methods
     

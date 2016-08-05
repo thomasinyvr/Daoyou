@@ -82,6 +82,7 @@ class TravelLocationsMapController: UIViewController, MKMapViewDelegate, VTMapVi
             let DoNotShowAgainAction = UIAlertAction(title: "Agree", style: UIAlertActionStyle.Default) { (action:UIAlertAction) in
                 AlertOnce.setBool(true , forKey: "oneTimeAlert")
                 AlertOnce.synchronize()
+                alert.removeFromParentViewController()
                 
             }
             
